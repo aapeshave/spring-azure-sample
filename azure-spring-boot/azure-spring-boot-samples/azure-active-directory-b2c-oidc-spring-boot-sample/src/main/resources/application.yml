@@ -1,0 +1,15 @@
+azure:
+  activedirectory:
+    b2c:
+      tenant: sophosdev
+      oidc-enabled: true
+      client-id: c542509b-b513-4589-8433-1039b325e013
+      client-secret: 'you client secret'
+      reply-url: http://localhost:131/home # should be absolute url.
+      logout-success-url: http://localhost:131/logout
+      user-flows:
+        sign-up-or-sign-in: B2C_1_phoenix_signin_signup_workflow
+        #profile-edit: B2C_1_test_profile_edit     # optional
+        #password-reset: ${your-password-reset-user-flow} # optional
+server:
+  port: 131
